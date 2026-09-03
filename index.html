@@ -4,128 +4,219 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ebraam Hany Adeep | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --accent-color: #38bdf8;
-            --text-color: #f8fafc;
-            --text-secondary: #94a3b8;
-            --border-color: #334155;
+            --bg-color: #090d16;
+            --card-bg: rgba(22, 31, 48, 0.7);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --primary-glow: #38bdf8;
+            --secondary-glow: #818cf8;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --badge-bg: rgba(56, 189, 248, 0.1);
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
         body {
             background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            padding: 20px;
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 40px 20px;
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.12) 0%, transparent 45%),
+                radial-gradient(circle at 85% 85%, rgba(129, 140, 248, 0.12) 0%, transparent 45%);
+            background-attachment: fixed;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 950px;
             margin: 0 auto;
-            padding: 20px;
         }
 
         header {
             text-align: center;
-            padding: 40px 0;
-            border-bottom: 1px solid var(--border-color);
+            padding: 40px 20px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            backdrop-filter: blur(12px);
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .profile-wrapper {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 25px;
         }
 
         .profile-img {
-            width: 160px;
-            height: 160px;
+            width: 100%;
+            height: 100%;
             border-radius: 50%;
             object-fit: cover;
-            object-position: center;
-            border: 3px solid var(--accent-color);
-            margin: 0 auto 20px auto;
-            display: block;
-            box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);
+            border: 3px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 30px rgba(56, 189, 248, 0.3);
         }
 
         h1 {
-            font-size: 2.5rem;
-            color: var(--text-color);
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             margin-bottom: 10px;
         }
 
         .subtitle {
-            font-size: 1.2rem;
-            color: var(--accent-color);
+            font-size: 1.15rem;
+            color: var(--primary-glow);
             font-weight: 600;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
         }
 
         .contact-info {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 15px;
             flex-wrap: wrap;
-            font-size: 0.95rem;
-            color: var(--text-secondary);
         }
 
-        .contact-info a {
-            color: var(--accent-color);
+        .contact-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            border: 1px solid var(--card-border);
             text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .contact-info a:hover {
-            text-decoration: underline;
+        .contact-item:hover {
+            border-color: var(--primary-glow);
+            color: var(--text-main);
+            transform: translateY(-2px);
         }
 
-        section {
-            margin: 40px 0;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            color: var(--accent-color);
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 8px;
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 700;
             margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-main);
+        }
+
+        .section-title i {
+            color: var(--primary-glow);
         }
 
         .card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
+            margin-bottom: 30px;
         }
 
-        ul {
-            list-style-type: square;
-            padding-left: 20px;
-            color: var(--text-secondary);
+        .skill-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 25px;
+            backdrop-filter: blur(12px);
         }
 
-        li {
+        .skill-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--primary-glow);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background: var(--badge-bg);
+            color: #7dd3fc;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 25px;
+            border-left: 2px solid var(--card-border);
+            margin-bottom: 20px;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -7px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--primary-glow);
+            box-shadow: 0 0 10px var(--primary-glow);
+        }
+
+        .timeline-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .timeline-sub {
+            font-size: 0.9rem;
+            color: var(--text-muted);
             margin-bottom: 8px;
         }
 
         footer {
             text-align: center;
-            padding: 30px 0;
-            color: var(--text-secondary);
+            padding: 20px;
+            color: var(--text-muted);
             font-size: 0.9rem;
-            border-top: 1px solid var(--border-color);
         }
     </style>
 </head>
@@ -133,88 +224,79 @@
 
     <div class="container">
         <header>
-            <img src="profile.jpeg" alt="Ebraam Hany Adeep" class="profile-img">
+            <div class="profile-wrapper">
+                <img src="profile.jpeg" alt="Ebraam Hany Adeep" class="profile-img">
+            </div>
             <h1>Ebraam Hany Adeep</h1>
-            <div class="subtitle">Software Tester | Data Analyst | Java Developer</div>
+            <div class="subtitle">Software Tester &bull; Data Analyst &bull; Java Developer</div>
             <div class="contact-info">
-                <span>📍 Faiyum, Egypt</span>
-                <span>✉️ <a href="mailto:hanyebraam77@gmail.com">hanyebraam77@gmail.com</a></span>
-                <span>🔗 <a href="https://www.linkedin.com/in/ebraam-hany-235661380" target="_blank">LinkedIn Profile</a></span>
+                <span class="contact-item"><i class="fa-solid fa-location-dot"></i> Faiyum, Egypt</span>
+                <a href="mailto:hanyebraam77@gmail.com" class="contact-item"><i class="fa-solid fa-envelope"></i> hanyebraam77@gmail.com</a>
+                <a href="https://www.linkedin.com/in/ebraam-hany-235661380" target="_blank" class="contact-item"><i class="fa-brands fa-linkedin"></i> LinkedIn Profile</a>
             </div>
         </header>
 
-        <section>
-            <h2>About Me</h2>
-            <div class="card">
-                <p>Computer Science and Information Technology student with hands-on experience in Data Analysis and Software Testing. Skilled in Python, SQL, Excel, Java, and Object-Oriented Programming, with knowledge of data cleaning, exploratory data analysis (EDA), data visualization, and software testing principles. Experienced in analyzing datasets, identifying software defects, and developing reliable technical solutions through practical projects. Strongly interested in combining analytical, programming, and testing skills to solve problems, improve software quality, and deliver reliable data-driven solutions.</p>
-            </div>
-        </section>
+        <div class="card">
+            <h2 class="section-title"><i class="fa-solid fa-user"></i> About Me</h2>
+            <p style="color: var(--text-muted);">Computer Science and Information Technology student with hands-on experience in Data Analysis and Software Testing. Skilled in Python, SQL, Excel, Java, and Object-Oriented Programming, with knowledge of data cleaning, exploratory data analysis (EDA), data visualization, and software testing principles. Experienced in analyzing datasets, identifying software defects, and developing reliable technical solutions through practical projects.</p>
+        </div>
 
-        <section>
-            <h2>Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="card">
-                    <h3 style="color: var(--text-color); margin-bottom: 10px;">🧪 Software Testing</h3>
-                    <ul>
-                        <li>Manual Testing & QA</li>
-                        <li>Test Case Design & Execution</li>
-                        <li>Bug Reporting & Defect Life Cycle</li>
-                        <li>Functional & Black-Box Testing</li>
-                        <li>JIRA & Test Tools</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3 style="color: var(--text-color); margin-bottom: 10px;">📊 Data Analysis</h3>
-                    <ul>
-                        <li>Data Cleaning & Preprocessing</li>
-                        <li>Exploratory Data Analysis (EDA)</li>
-                        <li>Data Visualization</li>
-                        <li>Python (Pandas, NumPy, Matplotlib)</li>
-                        <li>SQL & Excel / Calc</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3 style="color: var(--text-color); margin-bottom: 10px;">💻 Software Engineering</h3>
-                    <ul>
-                        <li>Object-Oriented Programming (OOP)</li>
-                        <li>Java Development</li>
-                        <li>Data Structures & Algorithms</li>
-                        <li>Apache NetBeans & VS Code</li>
-                        <li>Git & GitHub</li>
-                    </ul>
+        <h2 class="section-title"><i class="fa-solid fa-code"></i> Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3><i class="fa-solid fa-vial"></i> Software Testing</h3>
+                <div class="tags">
+                    <span class="tag">Manual Testing & QA</span>
+                    <span class="tag">Test Case Design</span>
+                    <span class="tag">Defect Life Cycle</span>
+                    <span class="tag">Black-Box Testing</span>
+                    <span class="tag">JIRA</span>
                 </div>
             </div>
-        </section>
+            <div class="skill-card">
+                <h3><i class="fa-solid fa-chart-pie"></i> Data Analysis</h3>
+                <div class="tags">
+                    <span class="tag">Data Cleaning</span>
+                    <span class="tag">Exploratory Data Analysis</span>
+                    <span class="tag">Python (Pandas, NumPy)</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">Data Visualization</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3><i class="fa-solid fa-laptop-code"></i> Software Engineering</h3>
+                <div class="tags">
+                    <span class="tag">Java Development</span>
+                    <span class="tag">OOP Concepts</span>
+                    <span class="tag">Data Structures</span>
+                    <span class="tag">Git & GitHub</span>
+                    <span class="tag">VS Code / NetBeans</span>
+                </div>
+            </div>
+        </div>
 
-        <section>
-            <h2>Education & Training</h2>
-            <div class="card">
-                <h3 style="color: var(--text-color);">🎓 Bachelor's Degree in CS & IT</h3>
-                <p style="color: var(--text-secondary);">Faculty of Computers and Information Technology – Egyptian E-Learning University (EELU)</p>
+        <div class="card">
+            <h2 class="section-title"><i class="fa-solid fa-graduation-cap"></i> Education & Training</h2>
+            <div class="timeline-item">
+                <div class="timeline-title">Bachelor's Degree in CS & IT</div>
+                <div class="timeline-sub">Faculty of Computers and Information Technology – EELU</div>
             </div>
-            <div class="card">
-                <h3 style="color: var(--text-color);">🏅 Professional Training</h3>
-                <ul>
-                    <li><strong>Software Testing Track:</strong> Digital Egypt Pioneers Initiative (DEPI)</li>
-                    <li><strong>Data Analysis Track:</strong> National Telecommunication Institute (NTI)</li>
-                    <li><strong>AI / Foundations Certification:</strong> Oracle University</li>
-                </ul>
+            <div class="timeline-item">
+                <div class="timeline-title">Software Testing Track</div>
+                <div class="timeline-sub">Digital Egypt Pioneers Initiative (DEPI)</div>
             </div>
-        </section>
-
-        <section>
-            <h2>Projects Overview</h2>
-            <div class="card">
-                <ul>
-                    <li><strong>Software QA Artifacts:</strong> Designed test cases using boundary value analysis and executed manual testing on complex workflows.</li>
-                    <li><strong>Data Analysis Projects:</strong> Cleaned raw data, formulated SQL queries, and generated visualization dashboards using Python.</li>
-                    <li><strong>Java Applications:</strong> Built structured desktop applications utilizing fundamental OOP principles.</li>
-                </ul>
+            <div class="timeline-item">
+                <div class="timeline-title">Data Analysis Track</div>
+                <div class="timeline-sub">National Telecommunication Institute (NTI)</div>
             </div>
-        </section>
+            <div class="timeline-item">
+                <div class="timeline-title">AI / Foundations Certification</div>
+                <div class="timeline-sub">Oracle University</div>
+            </div>
+        </div>
 
         <footer>
-            <p>&copy; Ebraam Hany Adeep. All rights reserved.</p>
+            <p>&copy; Ebraam Hany Adeep. Built with passion.</p>
         </footer>
     </div>
 
