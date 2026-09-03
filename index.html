@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ebraam Hany Adeep | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-color: #38bdf8;
+            --text-color: #f8fafc;
+            --text-secondary: #94a3b8;
+            --border-color: #334155;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .contact-info a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            margin: 40px 0;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+            color: var(--text-secondary);
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        li strong {
+            color: var(--text-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Ebraam Hany Adeep</h1>
+            <div class="subtitle">Software Tester | Data Analyst | Java Developer</div>
+            <div class="contact-info">
+                <span>📍 Faiyum, Egypt</span>
+                <span>✉️ <a href="mailto:hanyebraam77@gmail.com">hanyebraam77@gmail.com</a></span>
+                <span>🔗 <a href="https://www.linkedin.com/in/ebraam-hany-235661380" target="_blank">LinkedIn Profile</a></span>
+            </div>
+        </header>
+
+        <section>
+            <h2>About Me</h2>
+            <div class="card">
+                <p>Computer Science and Information Technology student with hands-on experience in Data Analysis and Software Testing. Skilled in Python, SQL, Excel, Java, and Object-Oriented Programming, with knowledge of data cleaning, exploratory data analysis (EDA), data visualization, and software testing principles. Experienced in analyzing datasets, identifying software defects, and developing reliable technical solutions through practical projects. Strongly interested in combining analytical, programming, and testing skills to solve problems, improve software quality, and deliver reliable data-driven solutions.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="card">
+                    <h3 style="color: var(--text-color); margin-bottom: 10px;">🧪 Software Testing</h3>
+                    <ul>
+                        <li>Manual Testing & QA</li>
+                        <li>Test Case Design & Execution</li>
+                        <li>Bug Reporting & Defect Life Cycle</li>
+                        <li>Functional & Black-Box Testing</li>
+                        <li>JIRA & Test Tools</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 style="color: var(--text-color); margin-bottom: 10px;">📊 Data Analysis</h3>
+                    <ul>
+                        <li>Data Cleaning & Preprocessing</li>
+                        <li>Exploratory Data Analysis (EDA)</li>
+                        <li>Data Visualization</li>
+                        <li>Python (Pandas, NumPy, Matplotlib)</li>
+                        <li>SQL & Excel / Calc</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 style="color: var(--text-color); margin-bottom: 10px;">💻 Software Engineering</h3>
+                    <ul>
+                        <li>Object-Oriented Programming (OOP)</li>
+                        <li>Java Development</li>
+                        <li>Data Structures & Algorithms</li>
+                        <li>Apache NetBeans & VS Code</li>
+                        <li>Git & GitHub</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education & Training</h2>
+            <div class="card">
+                <h3 style="color: var(--text-color);">🎓 Bachelor's Degree in CS & IT</h3>
+                <p style="color: var(--text-secondary);">Faculty of Computers and Information Technology – Egyptian E-Learning University (EELU)</p>
+            </div>
+            <div class="card">
+                <h3 style="color: var(--text-color);">🏅 Professional Training</h3>
+                <ul>
+                    <li><strong>Software Testing Track:</strong> Digital Egypt Pioneers Initiative (DEPI)</li>
+                    <li><strong>Data Analysis Track:</strong> National Telecommunication Institute (NTI)</li>
+                    <li><strong>AI / Foundations Certification:</strong> Oracle University</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Projects Overview</h2>
+            <div class="card">
+                <ul>
+                    <li><strong>Software QA Artifacts:</strong> Designed test cases using boundary value analysis and executed manual testing on complex workflows.</li>
+                    <li><strong>Data Analysis Projects:</strong> Cleaned raw data, formulated SQL queries, and generated visualization dashboards using Python.</li>
+                    <li><strong>Java Applications:</strong> Built structured desktop applications utilizing fundamental OOP principles.</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; Ebraam Hany Adeep. All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
