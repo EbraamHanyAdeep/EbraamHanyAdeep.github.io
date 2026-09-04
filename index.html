@@ -3,26 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ebraam Hany Adeep | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <title>Ebraam Hany | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --bg-color: #090d16;
-            --card-bg: rgba(22, 31, 48, 0.7);
-            --card-border: rgba(255, 255, 255, 0.08);
-            --primary-glow: #38bdf8;
-            --secondary-glow: #818cf8;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --badge-bg: rgba(56, 189, 248, 0.1);
+            --bg-color: #0b0f17;
+            --card-bg: #111827;
+            --accent-cyan: #00f2fe;
+            --text-white: #ffffff;
+            --text-gray: #9ca3af;
+            --border-color: rgba(255, 255, 255, 0.1);
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-family: 'Inter', sans-serif;
         }
 
         html {
@@ -31,488 +29,364 @@
 
         body {
             background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.7;
-            padding: 40px 20px;
-            background-image: 
-                radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.12) 0%, transparent 45%),
-                radial-gradient(circle at 85% 85%, rgba(129, 140, 248, 0.12) 0%, transparent 45%);
-            background-attachment: fixed;
+            color: var(--text-white);
+            line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        .container {
-            max-width: 950px;
-            margin: 0 auto;
-        }
-
-        header {
-            text-align: center;
-            padding: 40px 20px;
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 24px;
-            backdrop-filter: blur(12px);
-            margin-bottom: 30px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-        }
-
-        .profile-wrapper {
-            position: relative;
-            width: 150px;
-            height: 150px;
-            margin: 0 auto 25px;
-        }
-
-        .profile-img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 0 30px rgba(56, 189, 248, 0.3);
-        }
-
-        h1 {
-            font-size: 2.8rem;
-            font-weight: 800;
-            letter-spacing: -1px;
-            background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            font-size: 1.15rem;
-            color: var(--primary-glow);
-            font-weight: 600;
-            margin-bottom: 20px;
-            letter-spacing: 0.5px;
-        }
-
-        .contact-info {
+        /* Navbar Header */
+        nav {
             display: flex;
-            justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-bottom: 25px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 8%;
+            background: rgba(11, 15, 23, 0.8);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            border-bottom: 1px solid var(--border-color);
         }
 
-        .contact-item {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 10px 18px;
-            border-radius: 30px;
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            border: 1px solid var(--card-border);
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--text-white);
+        }
+
+        .logo span {
+            color: var(--accent-cyan);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-gray);
             text-decoration: none;
-            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-cyan);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
             display: flex;
             align-items: center;
-            gap: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 120px 8% 60px;
+            position: relative;
         }
 
-        .contact-item:hover {
-            border-color: var(--primary-glow);
-            color: var(--text-main);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(56, 189, 248, 0.15);
+        .hero-content {
+            max-width: 650px;
+            z-index: 2;
         }
 
-        .contact-item:active {
-            transform: translateY(1px) scale(0.97);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        .hero-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 20px;
         }
 
-        .header-actions {
+        .hero-title .name {
+            color: var(--accent-cyan);
+            display: block;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin-bottom: 35px;
+            max-width: 550px;
+        }
+
+        .hero-buttons {
             display: flex;
-            justify-content: center;
             gap: 15px;
             flex-wrap: wrap;
         }
 
-        .btn {
-            padding: 10px 20px;
-            border-radius: 30px;
-            font-size: 0.9rem;
-            font-weight: 600;
+        .btn-primary {
+            background: var(--accent-cyan);
+            color: #000;
+            padding: 14px 28px;
+            border-radius: 4px;
+            font-weight: 700;
             text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: pointer;
-            background: rgba(255, 255, 255, 0.05);
-            color: var(--text-muted);
-            border: 1px solid var(--card-border);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .btn:hover {
-            border-color: var(--primary-glow);
-            color: var(--text-main);
+        .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(56, 189, 248, 0.15);
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
         }
 
-        .btn:active {
-            transform: translateY(1px) scale(0.97);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-white);
+            padding: 14px 28px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
         }
 
-        .section-title {
-            font-size: 1.4rem;
+        .btn-secondary:hover {
+            border-color: var(--accent-cyan);
+            color: var(--accent-cyan);
+        }
+
+        /* Ambient Graphic Effect */
+        .hero-graphic {
+            position: absolute;
+            right: 8%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(0, 242, 254, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        .orbit-ring {
+            width: 280px;
+            height: 280px;
+            border: 1px solid rgba(0, 242, 254, 0.2);
+            border-radius: 50%;
+            position: absolute;
+            animation: rotate 20s linear infinite;
+        }
+
+        .core-glow {
+            width: 120px;
+            height: 120px;
+            background: var(--accent-cyan);
+            border-radius: 50%;
+            filter: blur(40px);
+            opacity: 0.5;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Sections General */
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-header {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
             font-weight: 700;
-            margin: 40px 0 20px;
+            margin-bottom: 40px;
             display: flex;
             align-items: center;
             gap: 10px;
-            color: var(--text-main);
         }
 
-        .section-title i {
-            color: var(--primary-glow);
+        .section-header::after {
+            content: '';
+            height: 1px;
+            background: var(--border-color);
+            flex-grow: 1;
+            margin-left: 20px;
+        }
+
+        /* Cards & Grids */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
         }
 
         .card {
             background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 20px;
+            border: 1px solid var(--border-color);
             padding: 30px;
-            backdrop-filter: blur(12px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border-radius: 8px;
+            transition: border-color 0.3s ease;
         }
 
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+        .card:hover {
+            border-color: var(--accent-cyan);
         }
 
-        .skill-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 20px;
-            padding: 25px;
-            backdrop-filter: blur(12px);
-        }
-
-        .skill-card h3 {
-            font-size: 1.1rem;
+        .card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.2rem;
+            color: var(--accent-cyan);
             margin-bottom: 15px;
-            color: var(--primary-glow);
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
 
         .tags {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
+            margin-top: 15px;
         }
 
         .tag {
-            background: var(--badge-bg);
-            color: #7dd3fc;
-            padding: 6px 12px;
-            border-radius: 8px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            border: 1px solid rgba(56, 189, 248, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-gray);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            border: 1px solid var(--border-color);
         }
 
-        /* Projects Section Styles */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        .project-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 20px;
-            overflow: hidden;
-            backdrop-filter: blur(12px);
-            transition: transform 0.3s ease, border-color 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary-glow);
-        }
-
-        .project-img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-bottom: 1px solid var(--card-border);
-        }
-
-        .project-content {
-            padding: 25px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            flex-grow: 1;
-        }
-
-        .project-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--text-main);
-            margin-bottom: 15px;
-        }
-
-        .project-detail-item {
-            font-size: 0.88rem;
-            color: var(--text-muted);
-            margin-bottom: 10px;
-        }
-
-        .project-detail-item strong {
-            color: var(--primary-glow);
-        }
-
-        .project-links {
-            display: flex;
-            gap: 12px;
-            margin-top: 20px;
-        }
-
-        .timeline-item {
-            position: relative;
-            padding-left: 25px;
-            border-left: 2px solid var(--card-border);
-            margin-bottom: 20px;
-        }
-
-        .timeline-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -7px;
-            top: 5px;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--primary-glow);
-            box-shadow: 0 0 10px var(--primary-glow);
-        }
-
-        .timeline-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--text-main);
-        }
-
-        .timeline-sub {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            margin-bottom: 8px;
-        }
-
+        /* Footer */
         footer {
+            padding: 40px 8%;
             text-align: center;
-            padding: 40px 0 20px;
-            color: var(--text-muted);
-            font-size: 0.9rem;
+            color: var(--text-gray);
+            border-top: 1px solid var(--border-color);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 900px) {
+            .hero-graphic { display: none; }
+            .hero-title { font-size: 2.8rem; }
+            .nav-links { display: none; }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Header -->
-        <header>
-            <div class="profile-wrapper">
-                <img src="profile.jpeg" alt="Ebraam Hany Adeep" class="profile-img">
-            </div>
-            <h1>Ebraam Hany Adeep</h1>
-            <div class="subtitle">Software Tester &bull; Data Analyst &bull; Java Developer</div>
-            
-            <div class="contact-info">
-                <span class="contact-item"><i class="fa-solid fa-location-dot"></i> Faiyum, Egypt</span>
-                <a href="mailto:hanyebraam77@gmail.com" class="contact-item"><i class="fa-solid fa-envelope"></i> hanyebraam77@gmail.com</a>
-                <a href="https://www.linkedin.com/in/ebraam-hany-235661380" target="_blank" class="contact-item"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-                <a href="https://github.com/EbraamHanyAdeep" target="_blank" class="contact-item"><i class="fa-brands fa-github"></i> GitHub</a>
-            </div>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">&gt;_ EBRAAM<span>.DEV</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#stack">Stack</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-            <div class="header-actions">
-                <a href="resume.pdf" download class="btn"><i class="fa-solid fa-download"></i> Download CV</a>
-                <a href="#projects" class="btn"><i class="fa-solid fa-briefcase"></i> View Projects</a>
-                <a href="mailto:hanyebraam77@gmail.com" class="btn"><i class="fa-solid fa-paper-plane"></i> Contact Me</a>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="name">Ebraam Hany</span>
+                // Software Tester & Data Analyst
+            </h1>
+            <p class="hero-subtitle">
+                Computer Science student passionate about Software Testing, Data Analysis, and Object-Oriented Programming. Building reliable technical solutions and analyzing datasets with precision.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn-primary">VIEW WORK <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="https://github.com/EbraamHanyAdeep" target="_blank" class="btn-secondary">GITHUB</a>
+                <a href="https://www.linkedin.com/in/ebraam-hany-235661380" target="_blank" class="btn-secondary">LINKEDIN</a>
+                <a href="resume.pdf" download class="btn-secondary">DOWNLOAD CV</a>
             </div>
-        </header>
-
-        <!-- About Me Section -->
-        <div class="card">
-            <h2 class="section-title" style="margin-top:0;"><i class="fa-solid fa-user"></i> About Me</h2>
-            <p style="color: var(--text-muted);">Computer Science and Information Technology student with hands-on experience in Data Analysis and Software Testing. Skilled in Python, SQL, Excel, Java, and Object-Oriented Programming, with knowledge of data cleaning, exploratory data analysis (EDA), data visualization, and software testing principles. Experienced in analyzing datasets, identifying software defects, and developing reliable technical solutions through practical projects.</p>
         </div>
 
-        <!-- Technical Skills Section -->
-        <h2 class="section-title"><i class="fa-solid fa-code"></i> Technical Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h3><i class="fa-solid fa-vial"></i> Software Testing</h3>
+        <!-- Ambient Graphic Element -->
+        <div class="hero-graphic">
+            <div class="orbit-ring"></div>
+            <div class="core-glow"></div>
+        </div>
+    </section>
+
+    <!-- Stack / Technical Skills -->
+    <section id="stack">
+        <h2 class="section-header">Technical Stack</h2>
+        <div class="grid-3">
+            <div class="card">
+                <h3>Software Testing</h3>
+                <p style="color: var(--text-gray); font-size: 0.9rem;">QA Methodologies, Manual Testing, Test Case Execution, Defect Life Cycle & JIRA.</p>
                 <div class="tags">
-                    <span class="tag">Manual Testing & QA</span>
-                    <span class="tag">Test Case Design</span>
-                    <span class="tag">Defect Life Cycle</span>
-                    <span class="tag">Black-Box Testing</span>
+                    <span class="tag">QA</span>
+                    <span class="tag">Manual Testing</span>
+                    <span class="tag">Black-Box</span>
                     <span class="tag">JIRA</span>
                 </div>
             </div>
-            <div class="skill-card">
-                <h3><i class="fa-solid fa-chart-pie"></i> Data Analysis</h3>
+
+            <div class="card">
+                <h3>Data Analysis</h3>
+                <p style="color: var(--text-gray); font-size: 0.9rem;">Data Cleaning, Exploratory Analysis, Visualizations & Database Queries.</p>
                 <div class="tags">
-                    <span class="tag">Microsoft Excel & Calc</span>
-                    <span class="tag">Data Cleaning & EDA</span>
-                    <span class="tag">Python (Pandas, Matplotlib)</span>
-                    <span class="tag">SQL Databases</span>
-                    <span class="tag">Data Visualization</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Pandas</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">Excel</span>
                 </div>
             </div>
-            <div class="skill-card">
-                <h3><i class="fa-solid fa-laptop-code"></i> Software Engineering</h3>
+
+            <div class="card">
+                <h3>Software Engineering</h3>
+                <p style="color: var(--text-gray); font-size: 0.9rem;">Object-Oriented Programming, Java Development & Relational Database Design.</p>
                 <div class="tags">
-                    <span class="tag">Java Development</span>
-                    <span class="tag">OOP Principles</span>
+                    <span class="tag">Java</span>
+                    <span class="tag">OOP</span>
                     <span class="tag">Data Structures</span>
-                    <span class="tag">Git & GitHub</span>
-                    <span class="tag">NetBeans / VS Code</span>
+                    <span class="tag">Git</span>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- Featured Projects Section -->
-        <h2 class="section-title" id="projects"><i class="fa-solid fa-folder-open"></i> Featured Projects</h2>
-        <div class="projects-grid">
-            
-            <!-- Project 1: Data Analysis -->
-            <div class="project-card">
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" alt="Data Analysis Project" class="project-img">
-                <div class="project-content">
-                    <div>
-                        <div class="project-title">Exploratory Data Analysis & Dashboard</div>
-                        
-                        <div class="project-detail-item">
-                            <strong>Problem:</strong> Raw tabular data contained missing entries, inconsistencies, and lacked clear actionable insights for decision-making.
-                        </div>
-                        <div class="project-detail-item">
-                            <strong>What I Did:</strong> Cleaned and structured data using Excel and Python (Pandas), formulated SQL queries for aggregations, and built visual summary dashboards.
-                        </div>
-                        <div class="project-detail-item">
-                            <strong>Result:</strong> Transformed unstructured datasets into clear visual metrics, highlighting key trends and improving data accessibility.
-                        </div>
-
-                        <div class="tags" style="margin-top: 15px;">
-                            <span class="tag">Excel</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">Pandas</span>
-                            <span class="tag">SQL</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/EbraamHanyAdeep" target="_blank" class="btn"><i class="fa-brands fa-github"></i> GitHub Repo</a>
-                    </div>
-                </div>
+    <!-- Featured Projects -->
+    <section id="projects">
+        <h2 class="section-header">Featured Projects</h2>
+        <div class="grid-3">
+            <div class="card">
+                <h3>Exploratory Data Analysis</h3>
+                <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 15px;">Cleaned tabular datasets using Excel and Python (Pandas) to formulate SQL queries and visualize trends.</p>
+                <a href="https://github.com/EbraamHanyAdeep" target="_blank" class="btn-secondary" style="font-size: 0.8rem; padding: 8px 16px;">View Repository</a>
             </div>
 
-            <!-- Project 2: SQL Gym Management -->
-            <div class="project-card">
-                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop" alt="SQL Gym Management" class="project-img">
-                <div class="project-content">
-                    <div>
-                        <div class="project-title">SQL Gym Management Database System</div>
-                        
-                        <div class="project-detail-item">
-                            <strong>Problem:</strong> Gym membership tracking and active subscription records suffered from data redundancy and manual tracking errors.
-                        </div>
-                        <div class="project-detail-item">
-                            <strong>What I Did:</strong> Designed a relational database schema, normalized entities, and wrote optimized SQL queries for membership tracking and trainer assignments.
-                        </div>
-                        <div class="project-detail-item">
-                            <strong>Result:</strong> Reduced query execution complexity and ensured relational integrity across member profiles and active payment plans.
-                        </div>
-
-                        <div class="tags" style="margin-top: 15px;">
-                            <span class="tag">SQL</span>
-                            <span class="tag">Relational DB</span>
-                            <span class="tag">Database Design</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/EbraamHanyAdeep" target="_blank" class="btn"><i class="fa-brands fa-github"></i> GitHub Repo</a>
-                    </div>
-                </div>
+            <div class="card">
+                <h3>Gym Management DB System</h3>
+                <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 15px;">Relational database schema designed for tracking memberships, payments, and trainer schedules efficiently.</p>
+                <a href="https://github.com/EbraamHanyAdeep" target="_blank" class="btn-secondary" style="font-size: 0.8rem; padding: 8px 16px;">View Repository</a>
             </div>
 
-            <!-- Project 3: Java & Software Testing -->
-            <div class="project-card">
-                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800&auto=format&fit=crop" alt="Java Software Testing" class="project-img">
-                <div class="project-content">
-                    <div>
-                        <div class="project-title">Java Application & QA Test Suite</div>
-                        
-                        <div class="project-detail-item">
-                            <strong>Problem:</strong> Identifying potential failure points and edge-case exceptions in desktop software workflows prior to deployment.
-                        </div>
-                        <div class="project-detail-item">
-                            <strong>What I Did:</strong> Developed core Java modules applying OOP design patterns, created test cases (Boundary Value & Equivalence Partitioning), and documented bugs.
-                        </div>
-                        <div class="project-detail-item">
-                            <strong>Result:</strong> Achieved clear test coverage, improved module stability, and maintained structured defect life-cycle logs.
-                        </div>
-
-                        <div class="tags" style="margin-top: 15px;">
-                            <span class="tag">Java</span>
-                            <span class="tag">OOP</span>
-                            <span class="tag">Test Cases</span>
-                            <span class="tag">JIRA</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/EbraamHanyAdeep" target="_blank" class="btn"><i class="fa-brands fa-github"></i> GitHub Repo</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Education & Training Section -->
-        <h2 class="section-title"><i class="fa-solid fa-graduation-cap"></i> Education & Training</h2>
-        <div class="card">
-            <div class="timeline-item">
-                <div class="timeline-title">Bachelor's Degree in CS & IT</div>
-                <div class="timeline-sub">Faculty of Computers and Information Technology – EELU</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-title">Software Testing Track</div>
-                <div class="timeline-sub">Digital Egypt Pioneers Initiative (DEPI)</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-title">Data Analysis Track</div>
-                <div class="timeline-sub">National Telecommunication Institute (NTI)</div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-title">AI / Foundations Certification</div>
-                <div class="timeline-sub">Oracle University</div>
+            <div class="card">
+                <h3>Java App & Test Suite</h3>
+                <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 15px;">Java application with built-in QA test cases applying boundary value and equivalence partitioning techniques.</p>
+                <a href="https://github.com/EbraamHanyAdeep" target="_blank" class="btn-secondary" style="font-size: 0.8rem; padding: 8px 16px;">View Repository</a>
             </div>
         </div>
+    </section>
 
-        <footer>
-            <p>&copy; Ebraam Hany Adeep. Built with passion.</p>
-        </footer>
-    </div>
+    <!-- Footer / Contact -->
+    <footer id="contact">
+        <p>&copy; 2026 Ebraam Hany Adeep. All rights reserved.</p>
+        <p style="margin-top: 10px;">
+            <a href="mailto:hanyebraam77@gmail.com" style="color: var(--accent-cyan); text-decoration: none;">hanyebraam77@gmail.com</a>
+        </p>
+    </footer>
 
 </body>
 </html>
