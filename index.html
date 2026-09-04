@@ -100,22 +100,29 @@
 
         .contact-item {
             background: rgba(255, 255, 255, 0.05);
-            padding: 8px 16px;
+            padding: 10px 18px;
             border-radius: 30px;
             font-size: 0.9rem;
             color: var(--text-muted);
             border: 1px solid var(--card-border);
             text-decoration: none;
-            transition: all 0.3s ease;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
             display: flex;
             align-items: center;
             gap: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .contact-item:hover {
             border-color: var(--primary-glow);
             color: var(--text-main);
             transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(56, 189, 248, 0.15);
+        }
+
+        .contact-item:active {
+            transform: translateY(1px) scale(0.97);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         .header-actions {
@@ -123,6 +130,35 @@
             justify-content: center;
             gap: 15px;
             flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+            border: 1px solid var(--card-border);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:hover {
+            border-color: var(--primary-glow);
+            color: var(--text-main);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(56, 189, 248, 0.15);
+        }
+
+        .btn:active {
+            transform: translateY(1px) scale(0.97);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         .section-title {
@@ -248,44 +284,6 @@
             margin-top: 20px;
         }
 
-        .btn {
-            padding: 10px 18px;
-            border-radius: 12px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background: var(--primary-glow);
-            color: #090d16;
-            border: 1px solid var(--primary-glow);
-        }
-
-        .btn-primary:hover {
-            background: #0284c7;
-            border-color: #0284c7;
-            color: #fff;
-            transform: translateY(-2px);
-        }
-
-        .btn-outline {
-            border: 1px solid var(--card-border);
-            color: var(--text-main);
-            background: rgba(255, 255, 255, 0.03);
-        }
-
-        .btn-outline:hover {
-            border-color: var(--primary-glow);
-            color: var(--primary-glow);
-            transform: translateY(-2px);
-        }
-
         .timeline-item {
             position: relative;
             padding-left: 25px;
@@ -344,14 +342,13 @@
                 <span class="contact-item"><i class="fa-solid fa-location-dot"></i> Faiyum, Egypt</span>
                 <a href="mailto:hanyebraam77@gmail.com" class="contact-item"><i class="fa-solid fa-envelope"></i> hanyebraam77@gmail.com</a>
                 <a href="https://www.linkedin.com/in/ebraam-hany-235661380" target="_blank" class="contact-item"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-                <a href="https://github.com/hanyebraam77-glitch" target="_blank" class="contact-item"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="https://github.com/hanyebraam77" target="_blank" class="contact-item"><i class="fa-brands fa-github"></i> GitHub</a>
             </div>
 
             <div class="header-actions">
-                <!-- يمكنك استبدال # بمسار ملف الـ CV الخاص بك في المستودع مثل resume.pdf -->
-                <a href="resume.pdf" download class="btn btn-primary"><i class="fa-solid fa-download"></i> Download CV</a>
-                <a href="#projects" class="btn btn-outline"><i class="fa-solid fa-briefcase"></i> View Projects</a>
-                <a href="mailto:hanyebraam77@gmail.com" class="btn btn-outline"><i class="fa-solid fa-paper-plane"></i> Contact Me</a>
+                <a href="resume.pdf" download class="btn"><i class="fa-solid fa-download"></i> Download CV</a>
+                <a href="#projects" class="btn"><i class="fa-solid fa-briefcase"></i> View Projects</a>
+                <a href="mailto:hanyebraam77@gmail.com" class="btn"><i class="fa-solid fa-paper-plane"></i> Contact Me</a>
             </div>
         </header>
 
@@ -425,7 +422,7 @@
                         </div>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/hanyebraam77-glitch" target="_blank" class="btn btn-outline"><i class="fa-brands fa-github"></i> GitHub Repo</a>
+                        <a href="https://github.com/hanyebraam77" target="_blank" class="btn"><i class="fa-brands fa-github"></i> GitHub Repo</a>
                     </div>
                 </div>
             </div>
@@ -454,7 +451,7 @@
                         </div>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/hanyebraam77-glitch" target="_blank" class="btn btn-outline"><i class="fa-brands fa-github"></i> GitHub Repo</a>
+                        <a href="https://github.com/hanyebraam77" target="_blank" class="btn"><i class="fa-brands fa-github"></i> GitHub Repo</a>
                     </div>
                 </div>
             </div>
@@ -484,7 +481,7 @@
                         </div>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/hanyebraam77-glitch" target="_blank" class="btn btn-outline"><i class="fa-brands fa-github"></i> GitHub Repo</a>
+                        <a href="https://github.com/hanyebraam77" target="_blank" class="btn"><i class="fa-brands fa-github"></i> GitHub Repo</a>
                     </div>
                 </div>
             </div>
