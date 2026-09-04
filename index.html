@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ebraam Hany | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --bg-color: #0b0f17;
             --card-bg: #111827;
-            --accent-cyan: #00f2fe;
+            --accent-cyan: #38bdf8;
             --text-white: #ffffff;
-            --text-gray: #9ca3af;
-            --border-color: rgba(255, 255, 255, 0.1);
+            --text-gray: #94a3b8;
+            --border-color: rgba(255, 255, 255, 0.08);
         }
 
         * {
@@ -32,29 +32,30 @@
             color: var(--text-white);
             line-height: 1.6;
             overflow-x: hidden;
+            padding-top: 70px;
         }
 
-        /* Navbar Header */
-        nav {
+        /* Navbar Header (Exact Match to Image) */
+        .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 25px 8%;
-            background: rgba(11, 15, 23, 0.8);
-            backdrop-filter: blur(10px);
+            padding: 18px 8%;
+            background-color: rgba(11, 15, 23, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             position: fixed;
             top: 0;
             width: 100%;
-            z-index: 100;
-            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
         }
 
         .logo {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.2rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.3rem;
             font-weight: 700;
-            letter-spacing: 1px;
-            color: var(--text-white);
+            color: #ffffff;
+            letter-spacing: -0.3px;
         }
 
         .logo span {
@@ -63,30 +64,36 @@
 
         .nav-links {
             display: flex;
-            gap: 30px;
+            align-items: center;
+            gap: 12px;
             list-style: none;
         }
 
         .nav-links a {
             color: var(--text-gray);
             text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 600;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            transition: color 0.3s ease;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: all 0.2s ease;
         }
 
         .nav-links a:hover {
+            color: #ffffff;
+        }
+
+        .nav-links a.active {
             color: var(--accent-cyan);
+            background-color: rgba(56, 189, 248, 0.12);
         }
 
         /* Hero Section */
         .hero {
-            min-height: 100vh;
+            min-height: calc(100vh - 70px);
             display: flex;
             align-items: center;
-            padding: 120px 8% 60px;
+            padding: 60px 8%;
             position: relative;
         }
 
@@ -97,7 +104,7 @@
 
         .hero-title {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 4rem;
+            font-size: 3.8rem;
             font-weight: 700;
             line-height: 1.1;
             margin-bottom: 20px;
@@ -123,9 +130,9 @@
 
         .btn-primary {
             background: var(--accent-cyan);
-            color: #000;
-            padding: 14px 28px;
-            border-radius: 4px;
+            color: #0b0f17;
+            padding: 12px 24px;
+            border-radius: 6px;
             font-weight: 700;
             text-decoration: none;
             font-size: 0.9rem;
@@ -138,20 +145,23 @@
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
         }
 
         .btn-secondary {
             background: transparent;
             color: var(--text-white);
-            padding: 14px 28px;
-            border-radius: 4px;
+            padding: 12px 24px;
+            border-radius: 6px;
             font-weight: 600;
             text-decoration: none;
             font-size: 0.9rem;
             letter-spacing: 0.5px;
             border: 1px solid var(--border-color);
             transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .btn-secondary:hover {
@@ -167,7 +177,7 @@
             transform: translateY(-50%);
             width: 350px;
             height: 350px;
-            background: radial-gradient(circle, rgba(0, 242, 254, 0.15) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, transparent 70%);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -178,7 +188,7 @@
         .orbit-ring {
             width: 280px;
             height: 280px;
-            border: 1px solid rgba(0, 242, 254, 0.2);
+            border: 1px solid rgba(56, 189, 248, 0.2);
             border-radius: 50%;
             position: absolute;
             animation: rotate 20s linear infinite;
@@ -224,7 +234,7 @@
         /* Cards & Grids */
         .grid-3 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
         }
 
@@ -232,12 +242,13 @@
             background: var(--card-bg);
             border: 1px solid var(--border-color);
             padding: 30px;
-            border-radius: 8px;
-            transition: border-color 0.3s ease;
+            border-radius: 12px;
+            transition: border-color 0.3s ease, transform 0.3s ease;
         }
 
         .card:hover {
             border-color: var(--accent-cyan);
+            transform: translateY(-3px);
         }
 
         .card h3 {
@@ -282,31 +293,31 @@
 <body>
 
     <!-- Navbar -->
-    <nav>
-        <div class="logo">&gt;_ EBRAAM<span>.DEV</span></div>
+    <nav class="navbar">
+        <div class="logo">Ebraam<span>.Hany</span></div>
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#stack">Stack</a></li>
+            <li><a href="#about" class="active">About</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
+    <!-- Hero / About Section -->
+    <section class="hero" id="about">
         <div class="hero-content">
             <h1 class="hero-title">
                 <span class="name">Ebraam Hany</span>
                 // Software Tester & Data Analyst
             </h1>
             <p class="hero-subtitle">
-                Computer Science student passionate about Software Testing, Data Analysis, and Object-Oriented Programming. Building reliable technical solutions and analyzing datasets with precision.
+                Computer Science student passionate about Software Testing, Data Analysis, and Java Development. Experienced in designing test cases, analyzing complex datasets, and executing clean technical solutions.
             </p>
             <div class="hero-buttons">
                 <a href="#projects" class="btn-primary">VIEW WORK <i class="fa-solid fa-arrow-right"></i></a>
-                <a href="https://github.com/EbraamHanyAdeep" target="_blank" class="btn-secondary">GITHUB</a>
-                <a href="https://www.linkedin.com/in/ebraam-hany-235661380" target="_blank" class="btn-secondary">LINKEDIN</a>
-                <a href="resume.pdf" download class="btn-secondary">DOWNLOAD CV</a>
+                <a href="https://github.com/EbraamHanyAdeep" target="_blank" class="btn-secondary"><i class="fa-brands fa-github"></i> GITHUB</a>
+                <a href="https://www.linkedin.com/in/ebraam-hany-235661380" target="_blank" class="btn-secondary"><i class="fa-brands fa-linkedin"></i> LINKEDIN</a>
+                <a href="resume.pdf" download class="btn-secondary"><i class="fa-solid fa-download"></i> CV</a>
             </div>
         </div>
 
@@ -317,9 +328,9 @@
         </div>
     </section>
 
-    <!-- Stack / Technical Skills -->
-    <section id="stack">
-        <h2 class="section-header">Technical Stack</h2>
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-header">Technical Skills</h2>
         <div class="grid-3">
             <div class="card">
                 <h3>Software Testing</h3>
@@ -356,7 +367,7 @@
         </div>
     </section>
 
-    <!-- Featured Projects -->
+    <!-- Projects Section -->
     <section id="projects">
         <h2 class="section-header">Featured Projects</h2>
         <div class="grid-3">
@@ -380,7 +391,7 @@
         </div>
     </section>
 
-    <!-- Footer / Contact -->
+    <!-- Footer / Contact Section -->
     <footer id="contact">
         <p>&copy; 2026 Ebraam Hany Adeep. All rights reserved.</p>
         <p style="margin-top: 10px;">
